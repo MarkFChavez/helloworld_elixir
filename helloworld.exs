@@ -1,1 +1,3 @@
-IO.puts "Hello, world!"
+name = "mark"
+
+IO.puts Regex.run(~r{mark}, name)
