@@ -1,3 +1,20 @@
-name = "mark"
+# maps
+employees = %{
+  "Mark Chavez" => "Software Engineer",
+  "Erik Chavez" => "Game Developer",
+  "Satoshi Nakamoto" => "Creator of Bitcoin"
+}
+IO.puts employees["Mark Chavez"]
 
-IO.puts Regex.run(~r{mark}, name)
+# division
+IO.puts 10 / 2 # will always return a decimal value
+IO.puts div(10, 3) # will not return a decimal value
+
+IO.puts "Mark" <> " " <> "Joel" # !> unused literal ignored # =>
+
+# functions
+sum = fn
+  (a, b) -> a + b
+end
+
+IO.puts sum.(100, 200)
