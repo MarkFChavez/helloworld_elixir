@@ -13,10 +13,9 @@ IO.puts div(10, 3) # will not return a decimal value
 IO.puts "Mark" <> " " <> "Joel" # !> unused literal ignored # =>
 
 # functions
-sum = fn
-  (a, b, c) -> a + b + c
+calculate = fn
+  (a, :ok) -> a + 10
+  (a, b) -> a - b
 end
 
-list_concat = fn
-  ([a, b], [c, d]) -> [a, b] ++ [c, d]
-end
+IO.puts calculate.(3, :ok)
