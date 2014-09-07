@@ -14,7 +14,9 @@ IO.puts "Mark" <> " " <> "Joel" # !> unused literal ignored # =>
 
 # functions
 sum = fn
-  (a, b) -> a + b
+  (a, b, c) -> a + b + c
 end
 
-IO.puts sum.(100, 200)
+list_concat = fn
+  ([a, b], [c, d]) -> [a, b] ++ [c, d]
+end
