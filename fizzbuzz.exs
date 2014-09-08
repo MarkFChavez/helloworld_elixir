@@ -1,9 +1,6 @@
-# fizzbuzz
 
-fizzbuzz = fn
-  (0, 0, a) -> "FizzBuzz"
-  (0, _, _) -> "Buzz"
-  (a, b, c) -> c
+fullname = fn
+  (firstname, lastname) -> "#{firstname} #{lastname}"
 end
 
-IO.puts fizzbuzz.(0, 0, 7)
+IO.inspect fullname.("Mark", "Chavez")
