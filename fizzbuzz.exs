@@ -1,6 +1,11 @@
-
 fullname = fn
   (firstname, lastname) -> "#{firstname} #{lastname}"
 end
 
-IO.inspect fullname.("Mark", "Chavez")
+languages = ["Ruby", "Elixir", "Go"]
+
+get = fn
+  [a, b, c] -> IO.puts "#{a} is awesome!"
+end
+
+get.(languages)
