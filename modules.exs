@@ -1,30 +1,13 @@
-defmodule Times do
-  def double(n) do
-    n * 2
+defmodule Outer do
+  defmodule Inner do
+    def innerfunc do
+      IO.puts "Inner FUNC"
+    end
   end
 
-  def triple(n) do
-    n * 3
-  end
-
-  def quadruple(n) do
-    double(n * 2)
+  def outerfunc do
+    Inner.innerfunc
   end
 end
 
-defmodule Factorial do
-  def of(0), do: 1
-  def of(n), do: n * of(n-1)
-end
-
-defmodule Sum do
-  def of(0) do
-    0
-  end
-
-  def of(n) do
-    n + of(n-1)
-  end
-end
-
-IO.inspect Sum.of(10000)
+Outer.outerfunc
