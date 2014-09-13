@@ -1,7 +1,9 @@
 defmodule DefaultParams do
-  def sum(a, b \\ 20) do
-    a + b
+  def func(a, b \\ 10)
+
+  def func(a, b) do
+    IO.puts "#{a} #{b}"
   end
 end
 
-IO.puts DefaultParams.sum(20)
+DefaultParams.func(10)
