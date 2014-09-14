@@ -3,4 +3,6 @@ reader = fn
   {:error, :enoent} -> "No file found"
 end
 
-IO.puts reader.(File.read("auto.exs"))
+a = 1
+
+{:ok, ^a} = {:ok, 1}
